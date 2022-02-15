@@ -1,6 +1,7 @@
 // Define variables and event listeners 
 
 let greetingDisplay = document.getElementById("greeting-display");
+let customGreeting = document.getElementById("custom-greeting");
 let greetingMessage
 
 
@@ -9,7 +10,16 @@ let greetingMessage
 
 function writeGreeting() {
     greetingMessage = document.getElementById("greeting-select").value;
-    // console.log("you selected:" + greetingMessage)
-    greetingDisplay.textContent = greetingMessage;
+
+    if (greetingMessage === "Custom greeting") {
+        customGreeting.style.display = "flex";
+        greetingDisplay.textContent = customGreeting.textContent;
+    }
+    else {
+        customGreeting.style.display = "none";
+        greetingDisplay.textContent = greetingMessage;
+    }
+
+    
     
 }
