@@ -80,3 +80,7 @@
       transform: scale(1.02);
       cursor: pointer;  
   }
+
+  #balloon-emoji {
+      display: none; 
+  }
