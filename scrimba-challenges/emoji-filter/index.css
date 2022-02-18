@@ -52,9 +52,10 @@
       color: var(--white);
       background: var(--deep-pink);
       width: 150px;
+      margin-top: 20px;
   }
 
-  #btn-filter {
+  #btn-filter, #btn-sort-order {
       margin-right: 15px;
   }
   

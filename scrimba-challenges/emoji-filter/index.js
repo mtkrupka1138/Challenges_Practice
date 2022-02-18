@@ -1,7 +1,8 @@
 // Event listeners for button clicks
 
-document.getElementById("btn-filter").addEventListener("click", filterDuplicates)
-document.getElementById("btn-sort").addEventListener("click", sortEmojis)
+document.getElementById("btn-filter").addEventListener("click", filterDuplicates);
+document.getElementById("btn-sort-order").addEventListener("click", sortEmojisOrder);
+document.getElementById("btn-sort-simple").addEventListener("click", sortEmojisSimple);
 
 
 // Original emoji array input 
@@ -45,9 +46,9 @@ for (let j = 1; j < emojiArr.length; j++) {
 let uniqueEmoji = [];
 
 
-// Function to find/filter duplicates
+// Mini function to populate uniqueEmoji array
 
-function filterDuplicates() {
+function generateUnique() {
 
     for (let i = 0; i < concatEmoji.length; i++) {
         let prevArr = uniqueEmoji.slice();
@@ -55,6 +56,16 @@ function filterDuplicates() {
             uniqueEmoji.push(concatEmoji[i]);
         }
     }
+    return uniqueEmoji;
+}
+
+
+// Function to find/filter duplicates
+
+function filterDuplicates() {
+
+    generateUnique();
+
     let joinUnique = uniqueEmoji.join('');
     if (uniqueEmojisP.textContent !== joinUnique) {
         uniqueEmojisP.textContent = joinUnique;
@@ -64,20 +75,42 @@ function filterDuplicates() {
 }
 
 
-// Function to sort by emoji type (used simplest solution that does not consider original order)
+function sortEmojisOrder() {
 
-function sortEmojis() {
+    let sortedEmojis = [];
+    generateUnique();
 
-    let sortedEmojis = concatEmoji.sort();
+    for (i = 0; i < uniqueEmoji.length; i++) {
+        for (j = 0; j < concatEmoji.length; j++) {
+            if (concatEmoji[j] === uniqueEmoji[i]) {
+                sortedEmojis.push(concatEmoji[j]);
+            }
+        }
+    }
 
-    let joinUnique = sortedEmojis.join('');
-    if (uniqueEmojisP.textContent !== joinUnique) {
-        uniqueEmojisP.textContent = joinUnique;
+    let joinSorted = sortedEmojis.join('');
+    if (uniqueEmojisP.textContent !== joinSorted) {
+        uniqueEmojisP.textContent = joinSorted;
     }
     else { alert("Refresh the page to restart!") }
 
 }
 
 
-// Note: you can press the sort button after the filter button and vice versa
-// but you cannot press either one two times in a row; alert will appear to refresh the page
+// Function to sort by emoji type using basic sort() method
+
+function sortEmojisSimple() {
+
+    let sortedEmojis = concatEmoji.sort();
+
+    let joinSorted = sortedEmojis.join('');
+    if (uniqueEmojisP.textContent !== joinSorted) {
+        uniqueEmojisP.textContent = joinSorted;
+    }
+    else { alert("Refresh the page to restart!") }
+
+}
+
+
+// Note: you can press either sort button after the filter button and vice versa
+// but you cannot press any button two times in a row; alert will appear to refresh the page
