@@ -69,6 +69,7 @@ function generateUnique() {
 // Function to add emoji to original array
 
 function addEmoji() {
+
     console.log(this.textContent);
     if (this.textContent === '🌸') {
         concatEmoji.push(this.textContent)
@@ -80,6 +81,7 @@ function addEmoji() {
         concatEmoji.push(this.textContent)
     }
     allEmojisP.textContent = concatEmoji.join('');
+    
 }
 
 
