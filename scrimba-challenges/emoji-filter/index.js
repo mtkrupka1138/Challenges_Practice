@@ -3,6 +3,12 @@
 document.getElementById("btn-filter").addEventListener("click", filterDuplicates);
 document.getElementById("btn-sort-order").addEventListener("click", sortEmojisOrder);
 document.getElementById("btn-sort-simple").addEventListener("click", sortEmojisSimple);
+document.getElementById("btn-add-flower").addEventListener("click", addEmoji);
+document.getElementById("btn-add-donut").addEventListener("click", addEmoji);
+document.getElementById("btn-add-rainbow").addEventListener("click", addEmoji);
+let flower = document.getElementById("btn-add-flower");
+let donut = document.getElementById("btn-add-donut");
+let rainbow = document.getElementById("btn-add-rainbow");
 
 
 // Original emoji array input 
@@ -21,8 +27,8 @@ const emojis = [
 
 // Variables for paragraph elements and for loop to add emojis to text content
 
-const allEmojisP = document.getElementById("all-emojis-p")
-const uniqueEmojisP = document.getElementById("unique-emojis-p")
+let allEmojisP = document.getElementById("all-emojis-p")
+let uniqueEmojisP = document.getElementById("unique-emojis-p")
 
 for (let emoji of emojis) {
     allEmojisP.textContent += emoji
@@ -57,6 +63,23 @@ function generateUnique() {
         }
     }
     return uniqueEmoji;
+}
+
+
+// Function to add emoji to original array
+
+function addEmoji() {
+    console.log(this.textContent);
+    if (this.textContent === '🌸') {
+        concatEmoji.push(this.textContent)
+    }
+    if (this.textContent === '🍩') {
+        concatEmoji.push(this.textContent)
+    }
+    if (this.textContent === '🌈') {
+        concatEmoji.push(this.textContent)
+    }
+    allEmojisP.textContent = concatEmoji.join('');
 }
 
 

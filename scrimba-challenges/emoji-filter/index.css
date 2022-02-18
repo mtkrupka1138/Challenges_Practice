@@ -2,9 +2,10 @@
     --yellow: #FBF3AB;
     --light-pink: #F0B9DD;
     --lavender: #C7B9FF;
-    --deep-pink: #F04C86;
+    --deep-pink: #dd4cf0;
     --raisin: #2B283A;
     --white: #fff;
+    --purple: #741980
   }
   
   html, body {
@@ -43,7 +44,19 @@
       display: flex;
   }
 
-  button {
+  .button-add-emoji {
+    font-family: inherit;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 5px;
+    border: none;
+    padding: 1em 1em;
+    color: var(--white);
+    background: var(--purple);
+    width: 100px;
+    margin-top: 10px;
+  }
+
+  .button-sort {
       font-family: inherit;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
       border-radius: 5px;
@@ -52,7 +65,11 @@
       color: var(--white);
       background: var(--deep-pink);
       width: 150px;
-      margin-top: 20px;
+      margin-top: 10px;
+  }
+
+  #btn-add-donut, #btn-add-rainbow{
+      margin-left: 15px;
   }
 
   #btn-filter, #btn-sort-order {
