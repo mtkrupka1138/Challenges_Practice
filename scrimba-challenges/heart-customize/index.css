@@ -5,6 +5,7 @@
     --deep-pink: #F04C86;
     --raisin: #2B283A;
     --white: #fff;
+    --pseudo: #fff;
   }
   
   html, body {
@@ -61,7 +62,7 @@
   .heart:after {
     content: "";
     position: absolute;
-    background-color: var(--white);
+    background-color: var(--pseudo);
     border-radius: 50%;
     height: 100px;
     width: 100px;
