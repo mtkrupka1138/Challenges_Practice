@@ -6,9 +6,6 @@ document.getElementById("btn-sort-simple").addEventListener("click", sortEmojisS
 document.getElementById("btn-add-flower").addEventListener("click", addEmoji);
 document.getElementById("btn-add-donut").addEventListener("click", addEmoji);
 document.getElementById("btn-add-rainbow").addEventListener("click", addEmoji);
-let flower = document.getElementById("btn-add-flower");
-let donut = document.getElementById("btn-add-donut");
-let rainbow = document.getElementById("btn-add-rainbow");
 
 
 // Original emoji array input 
@@ -70,7 +67,6 @@ function generateUnique() {
 
 function addEmoji() {
 
-    console.log(this.textContent);
     if (this.textContent === '🌸') {
         concatEmoji.push(this.textContent)
     }
@@ -81,7 +77,7 @@ function addEmoji() {
         concatEmoji.push(this.textContent)
     }
     allEmojisP.textContent = concatEmoji.join('');
-    
+
 }
 
 
