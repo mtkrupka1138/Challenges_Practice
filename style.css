@@ -10,14 +10,15 @@ h1 {
     font-weight: 700;
     max-width: 85%;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 p {
     color: #7D889E;
-    max-width: 85%;
+    max-width: 83%;
     margin: 0 auto;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.04rem;
+    line-height: 1.4rem;
 }
 
 img {
@@ -34,7 +35,9 @@ img {
     height: 497px;
     text-align: center;
     margin: 100px auto;
+    box-shadow: -5px 5px 5px -5px rgb(153, 151, 151), 5px 5px 5px -5px rgb(153, 151, 151);
 }
+
 
 
 
