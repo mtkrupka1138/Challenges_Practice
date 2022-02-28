@@ -1,6 +1,7 @@
 :root {
     --soft-blue: hsl(215, 51%, 70%);
-    --cyan: hsl(178, 100%, 50%);
+    --cyan: hsl(180, 100%, 50%);
+    --cyan-opaque: hsl(180, 100%, 50%, 0.5);
     --very-dark-blue-main: hsl(217, 54%, 11%);
     --very-dark-blue-card: hsl(216, 50%, 16%);
     --very-dark-blue-line: #2B283A;
@@ -28,19 +29,35 @@ p {
     text-align: left;
 }
 
-img {
-    border-radius: 10px;
-    max-width: 90%;
-    height: auto;
-    margin: 15px 0;
-} 
+.mask {
+    border-radius: 15px;
+    width: 302px;
+    height: 302px;
+    margin: 24px;
+    overflow: hidden;
+    background-color: hsl(180, 100%, 50%, 0);
+}
+
+.mask:hover {
+    background-color: hsl(180, 100%, 50%, 0.8);;
+}
+
+.ether:hover {
+    opacity: 0.5;
+}
 
 .ether {
     border-radius: 10px;
     width: 302px;
     height: 302px;
-    margin: 24px
+    cursor: pointer;
+    margin: 0;
+    opacity: 1;
 } 
+
+.ether:hover {
+    color: var(--cyan);
+}
 
 hr {
     border: 1px solid var(--very-dark-blue-line);
@@ -54,6 +71,7 @@ hr {
     height: 596px;
     text-align: center;
     margin: 150px auto;
+    overflow: hidden;
 }
 
 .text {
@@ -89,7 +107,13 @@ hr {
 }
 
 .avatar-span span {
-    color: var(--white)
+    color: var(--white);
+    cursor: pointer;
+}
+
+.avatar-span span:hover,
+h1:hover {
+    color: var(--cyan);
 }
 
 .price-ethereum img, 
@@ -103,3 +127,4 @@ hr {
     border: 1px solid var(--white); 
     border-radius: 50%;
 }
+
