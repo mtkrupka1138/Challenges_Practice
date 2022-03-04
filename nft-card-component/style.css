@@ -4,7 +4,7 @@
     --cyan-opaque: hsl(180, 100%, 50%, 0.5);
     --very-dark-blue-main: hsl(217, 54%, 11%);
     --very-dark-blue-card: hsl(216, 50%, 16%);
-    --very-dark-blue-line: #2B283A;
+    --very-dark-blue-line: #2E405A;
     --white: hsl(0, 0%, 100%);
   }
 
@@ -30,16 +30,19 @@ p {
 }
 
 .mask {
-    border-radius: 15px;
+    border-radius: 8px;
     width: 302px;
     height: 302px;
     margin: 24px;
-    overflow: hidden;
     background-color: hsl(180, 100%, 50%, 0);
+    align-content: center;
 }
 
 .mask:hover {
-    background-color: hsl(180, 100%, 50%, 0.8);;
+    background-color: hsl(180, 100%, 50%, 1);
+    background-image: url("images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ether:hover {
@@ -47,7 +50,7 @@ p {
 }
 
 .ether {
-    border-radius: 10px;
+    border-radius: 8px;
     width: 302px;
     height: 302px;
     cursor: pointer;
@@ -66,7 +69,7 @@ hr {
 
 .main-container {
     background-color: var(--very-dark-blue-card);
-    border-radius: 20px;
+    border-radius: 15px;
     width: 350px;
     height: 596px;
     text-align: center;
@@ -94,6 +97,15 @@ hr {
 .time-left,
 .avatar-span {
     display: flex;
+    align-items: center;
+}
+
+.price-ethereum p {
+    font-weight: 600;
+}
+
+.time-left p {
+    color: var(--soft-blue);
 }
 
 .avatar-info {
@@ -118,12 +130,18 @@ h1:hover {
 
 .price-ethereum img, 
 .time-left img {
-    margin-right: 3px;
+    margin-right: 5px;
+    height: auto;
+}
+
+.time-left img {
+    width: 16px;
+    height: 16px;
 }
 
 .avatar-img {
     width: 33px;
-    height: auto;
+    height: 33px;
     border: 1px solid var(--white); 
     border-radius: 50%;
 }
