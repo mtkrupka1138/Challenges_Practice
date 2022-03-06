@@ -33,6 +33,16 @@ p {
     text-align: left;
 }
 
+.main-container {
+    background-color: var(--very-dark-blue-card);
+    border-radius: 15px;
+    width: 350px;
+    height: 596px;
+    text-align: center;
+    margin: 150px auto;
+    overflow: hidden;
+}
+
 .nft {
     width: 302px;
     height: 302px;
@@ -71,16 +81,6 @@ p {
 hr {
     border: 1px solid var(--very-dark-blue-line);
     margin: 0;
-}
-
-.main-container {
-    background-color: var(--very-dark-blue-card);
-    border-radius: 15px;
-    width: 350px;
-    height: 596px;
-    text-align: center;
-    margin: 150px auto;
-    overflow: hidden;
 }
 
 .text {
@@ -150,5 +150,13 @@ h1:hover {
     height: 33px;
     border: 1px solid var(--white); 
     border-radius: 50%;
+}
+
+@media only screen and (max-width: 375px) {
+
+    .main-container {
+        margin: 70px auto;
+    }
+
 }
 
