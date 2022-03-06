@@ -88,14 +88,9 @@ hr {
     margin: 0 auto;
 }
 
-.text p {
-    margin-bottom: 10px;
-}
-
 .info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
 }
 
 .info p {
