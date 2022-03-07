@@ -7,6 +7,20 @@
   }
 
   body {
+      font-family: 'Red Hat Display', sans-serif;
       font-size: 16px;
+      font-weight: 500;
+      background-color: var(--pale-blue);
+      background-image: url("images/pattern-background-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
   }
-  
+
+  .main-container {
+      width: 450px;
+      height: 697px;
+      margin: 100px auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 20px;
+  }
