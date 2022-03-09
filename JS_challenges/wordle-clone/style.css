@@ -10,6 +10,14 @@ header {
     color: #ffffff;
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 50px;
+    font-size: 10px;
+}
+
 #game {
     width: 100%;
     height: 100%;
