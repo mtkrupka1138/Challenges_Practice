@@ -1,0 +1,65 @@
+/* Basics */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Header component */
+
+.header-logo {
+
+}
+
+.journal-title {
+
+}
+
+
+/* Card component */
+
+.cards-list {
+
+}
+
+.card {
+
+}
+
+.card img {
+
+}
+
+.card-info {
+
+}
+
+.card-info-map {
+
+}
+
+.location-country {
+
+}
+
+.maps-link {
+
+}
+
+.location-title {
+
+}
+
+.travel-date {
+
+}
+
+.travel-summary {
+
+}
+

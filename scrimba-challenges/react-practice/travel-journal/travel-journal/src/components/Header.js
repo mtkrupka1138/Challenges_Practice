@@ -4,7 +4,7 @@ export default function Header(props) {
 
     return (
         <header className="header-logo">
-            <img />
+            <img alt="globe icon"/>
             <p className="journal-title">my travel journal</p>
         </header>
     )
