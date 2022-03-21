@@ -1,10 +1,10 @@
 // Global variables
 
-const totalGuessCount = 6;
-let currentGuessCount = 0;
-let wordInProgress = [];
-let currentLetter = 0;
-// let correctWord = ;
+const totalGuessCount = 6;  // variable for total number of words to be guessed
+let guessesLeft = totalGuessCount;
+let wordInProgress = [];    // current word being typed
+let currentLetter = 0;  // current letter
+// let correctWord = ;  // random word generated/chosen from array 
 
 
 // Event listeners for physical and on-screen keyboards 
@@ -13,7 +13,7 @@ let currentLetter = 0;
 document.getElementById("keyboard").addEventListener("click", screenKeyboard);
 
 function screenKeyboard(e) {
-    console.log(e.target.textContent);
+    let keyStrokeScreen = e.target.textContent;
 }
 
 
@@ -21,10 +21,51 @@ function screenKeyboard(e) {
 addEventListener("keyup", physicalKeyboard);
 
 function physicalKeyboard(e) {
-    console.log(e.key);
+    let keyStrokePhys = e.key;
+
+    if (guessesLeft === 0) {
+        return
+    }
+
+    if(keyStrokePhys === "Backspace" && currentLetter !== 0) {
+        deleteLetter();
+        return;
+    }
+
+    if(keyStrokePhys === "Enter") {
+        checkGuess();
+        return;
+    }
+
+    let checkKeyPressed = keyStrokePhys.match(/[a-z]/gi)
+    if(!checkKeyPressed || checkKeyPressed.length > 1) {
+        return;
+    }
+    else { addLetter(keyStrokePhys); }
+
+}
+
+// functions for deleting and adding letters
+
+function deleteLetter() {
+    wordInProgress.pop();
+}
+
+function addLetter(letter) {
+    wordInProgress.push(letter);
+}
+
+// function to check guess
+
+function checkGuess(word) {
+    
+}
+
+// function to color keyboard
+
+function colorKeyboard() {
+
 }
 
 
-// what happens when key is called 
-// letter needs to be added to wordInProgress
-// need indices 0-4 filled for each guess count
+
