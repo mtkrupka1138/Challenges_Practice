@@ -1,3 +1,6 @@
+// import { WORDS } from "./words";
+
+
 // Global variables
 
 const totalGuessCount = 6;  // variable for total number of words to be guessed
@@ -48,11 +51,23 @@ function physicalKeyboard(e) {
 // functions for deleting and adding letters
 
 function deleteLetter() {
+
+    let currentGuessWord = document.getElementsByClassName("row-board")[totalGuessCount - guessesLeft];
+    let letterTile = currentGuessWord.children[currentLetter - 1];
+    letterTile.textContent = ""
     wordInProgress.pop();
+    currentLetter -= 1; 
+
 }
 
 function addLetter(letter) {
+
+    let currentGuessWord = document.getElementsByClassName("row-board")[totalGuessCount - guessesLeft];
+    let letterTile = currentGuessWord.children[currentLetter];
+    letterTile.textContent = letter; 
     wordInProgress.push(letter);
+    currentLetter += 1;
+
 }
 
 // function to check guess
