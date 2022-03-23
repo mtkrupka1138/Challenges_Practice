@@ -78,16 +78,20 @@ function addLetter(letter) {
 // function to check guess
 
 function checkGuess(word) {
-    let guessString = ''
+    
     let correctGuess = Array.from(correctWord)
+
+    // basic checks for number of letters requirement and for word existing in WORDS array
+    
+    if (wordInProgress.length < 5) {
+        alert("Your word is not 5 letters long!")
+    }
 
     // if (!WORDS.includes(wordInProgress.join(''))) {
     //     alert("Your word does not exist!")
     // }
 
-    if (wordInProgress.length < 5) {
-        alert("Your word is not 5 letters long!")
-    }
+    // for loop to color tiles
 
     for (let i = 0; i < 5; i++) {
 
@@ -108,11 +112,15 @@ function checkGuess(word) {
                 // shade that letter tile yellow 
                 letterTile.style.backgroundColor = "yellow"
             }
+            // do this for all letters that are correct, whether in right position or not
+            // if letter is in word, eliminate it for next round so it is not matched again
             correctGuess[letterPosition] = "-"
         }
         console.log(correctGuess)
         
     }
+
+    // if else statement for alerts and for next guesses/turns
 
     if (wordInProgress.join('') === correctWord) {
         alert("You guessed the correct word! Game over.")
@@ -132,9 +140,7 @@ function checkGuess(word) {
 
 
 
-
-
-// function to color keyboard
+// function to color keyboard to match tiles
 
 function colorKeyboard() {
 
