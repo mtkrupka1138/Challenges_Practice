@@ -1,4 +1,4 @@
-// import { WORDS } from "./words.js";
+import WORDS from "./words.js";
 
 
 // Global variables
@@ -7,9 +7,9 @@ const totalGuessCount = 6;  // variable for total number of words to be guessed
 let guessesLeft = totalGuessCount;
 let wordInProgress = [];    // current word being typed
 let currentLetter = 0;  // current letter
-let correctWord = 'helle';
+let correctWord = WORDS[Math.floor(Math.random()*WORDS.length)];
 let correctWordSingles = correctWord;
-
+console.log(correctWord);
 
 // Event listeners for physical and on-screen keyboards 
 
@@ -18,6 +18,27 @@ document.getElementById("keyboard").addEventListener("click", screenKeyboard);
 
 function screenKeyboard(e) {
     let keyStrokeScreen = e.target.textContent;
+
+    if (guessesLeft === 0) {
+        return;
+    }
+
+    if (keyStrokeScreen === "del" && currentLetter !== 0) {
+        deleteLetter();
+        return;
+    }
+
+    if (keyStrokeScreen === "enter") {
+        checkGuess();
+        return;
+    }
+
+    let checkKeyScreen = keyStrokeScreen.match(/[a-z]/gi)
+    if(!checkKeyScreen || checkKeyScreen.length > 1) {
+        return;
+    }
+    else { addLetter(keyStrokeScreen); }
+
 }
 
 
@@ -28,15 +49,15 @@ function physicalKeyboard(e) {
     let keyStrokePhys = e.key;
 
     if (guessesLeft === 0) {
-        return
+        return;
     }
 
-    if(keyStrokePhys === "Backspace" && currentLetter !== 0) {
+    if (keyStrokePhys === "Backspace" && currentLetter !== 0) {
         deleteLetter();
         return;
     }
 
-    if(keyStrokePhys === "Enter") {
+    if (keyStrokePhys === "Enter") {
         checkGuess();
         return;
     }
@@ -85,6 +106,7 @@ function checkGuess(word) {
     
     if (wordInProgress.length < 5) {
         alert("Your word is not 5 letters long!")
+        return
     }
 
     // if (!WORDS.includes(wordInProgress.join(''))) {
@@ -116,8 +138,6 @@ function checkGuess(word) {
             // if letter is in word, eliminate it for next round so it is not matched again
             correctGuess[letterPosition] = "-"
         }
-        console.log(correctGuess)
-        
     }
 
     // if else statement for alerts and for next guesses/turns
