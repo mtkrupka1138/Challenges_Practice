@@ -41,7 +41,6 @@ function screenKeyboard(e) {
 
 }
 
-
 // physical keyboard
 addEventListener("keyup", physicalKeyboard);
 
@@ -109,35 +108,43 @@ function checkGuess(word) {
         return
     }
 
-    // if (!WORDS.includes(wordInProgress.join(''))) {
-    //     alert("Your word does not exist!")
-    // }
+    if (!WORDS.includes(wordInProgress.join(''))) {
+        alert("Your word does not exist!")
+        return;
+    }
 
-    // for loop to color tiles
+    // for loop to color board tiles
 
     for (let i = 0; i < 5; i++) {
 
         let currentGuessWordRow = document.getElementsByClassName("row-board")[totalGuessCount - guessesLeft];
         let letterTile = currentGuessWordRow.children[i];
         let letterPosition = correctGuess.indexOf(wordInProgress[i]);
+        let letter = wordInProgress[i];
+        let keyColor = "";
         
         if (letterPosition === -1) {
             // shade that letter tile gray
-            letterTile.style.backgroundColor = "gray"
+            letterTile.style.backgroundColor = "gray";
+            keyColor = "gray";
         }
         else {
             if (wordInProgress[i] === correctGuess[i]) {
                 // shade that letter tile green 
-                letterTile.style.backgroundColor = "green"
+                letterTile.style.backgroundColor = "green";
+                keyColor = "green";
             }
             else {
                 // shade that letter tile yellow 
-                letterTile.style.backgroundColor = "yellow"
+                letterTile.style.backgroundColor = "yellow";
+                keyColor = "yellow";
             }
             // do this for all letters that are correct, whether in right position or not
             // if letter is in word, eliminate it for next round so it is not matched again
-            correctGuess[letterPosition] = "-"
+            correctGuess[letterPosition] = "-";
         }
+
+        colorKeyboard(letter, keyColor);
     }
 
     // if else statement for alerts and for next guesses/turns
@@ -162,7 +169,7 @@ function checkGuess(word) {
 
 // function to color keyboard to match tiles
 
-function colorKeyboard() {
+function colorKeyboard(letter, color) {
 
 }
 
