@@ -125,8 +125,8 @@ function checkGuess(word) {
         
         if (letterPosition === -1) {
             // shade that letter tile gray
-            letterTile.style.backgroundColor = "gray";
-            keyColor = "gray";
+            letterTile.style.backgroundColor = "DarkGray";
+            keyColor = "DarkGray";
         }
         else {
             if (wordInProgress[i] === correctGuess[i]) {
@@ -136,8 +136,8 @@ function checkGuess(word) {
             }
             else {
                 // shade that letter tile yellow 
-                letterTile.style.backgroundColor = "yellow";
-                keyColor = "yellow";
+                letterTile.style.backgroundColor = "gold";
+                keyColor = "gold";
             }
             // do this for all letters that are correct, whether in right position or not
             // if letter is in word, eliminate it for next round so it is not matched again
@@ -171,6 +171,23 @@ function checkGuess(word) {
 
 function colorKeyboard(letter, color) {
 
+    // go through text of each key button until it matches the letter guessed
+    for (const key of document.getElementsByTagName("button")) {
+        if (key.textContent === letter) {
+            let currentColor = key.style.backgroundColor
+            // if key color is green, leave it green
+            if (currentColor === "green") {
+                return
+            } 
+            // if key color is currently yellow, then it can only change to green
+            if (currentColor === "gold" && color !== "green") {
+                return
+            }
+            // otherwise, change key to color passed in
+            key.style.backgroundColor = color
+            break
+        }
+    }
 }
 
 
