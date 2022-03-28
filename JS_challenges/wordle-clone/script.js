@@ -8,11 +8,14 @@ let guessesLeft = totalGuessCount;
 let wordInProgress = [];    // current word being typed
 let currentLetter = 0;  // current letter
 let correctWord = WORDS[Math.floor(Math.random()*WORDS.length)];
-let correctWordSingles = correctWord;
+
+
+// For testing purposes
+
 console.log(correctWord);
 
-// Event listeners for physical and on-screen keyboards 
 
+// Event listeners for physical and on-screen keyboards 
 // on-screen keyboard
 document.getElementById("keyboard").addEventListener("click", screenKeyboard);
 
@@ -69,6 +72,7 @@ function physicalKeyboard(e) {
 
 }
 
+
 // functions for deleting and adding letters
 
 function deleteLetter() {
@@ -94,6 +98,7 @@ function addLetter(letter) {
     currentLetter += 1;
 
 }
+
 
 // function to check guess
 
@@ -164,7 +169,6 @@ function checkGuess(word) {
         }
     }
 }
-
 
 
 // function to color keyboard to match tiles
