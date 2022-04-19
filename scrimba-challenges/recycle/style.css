@@ -64,10 +64,18 @@ select {
     border-radius: var(--border-rad-5);
     box-shadow: var(--box-shadow);
     margin: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #empty-btn {
     background-color: green;
+}
+
+.div-item {
+    font-size: 50px;
 }
 
 p {
@@ -85,3 +93,11 @@ ul {
     overflow-y: scroll;
 }
 
+.bounce {
+    animation: bounce 1s ease 0s 1 normal;
+  }
+  @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-50px);}
+      60% {transform: translateY(-15px);}
+  }
