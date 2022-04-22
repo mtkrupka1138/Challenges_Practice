@@ -1,6 +1,8 @@
-const pointsEl = document.getElementById("points-p")
-const btnsContainer = document.getElementById("btns-container")
+const pointsEl = document.getElementById("points-p");
+const btnsContainer = document.getElementById("btns-container");
+const activityCount = document.getElementById("activity-count");
 let count = Number(pointsEl.innerHTML[0]);
+let activity = 0;
 
 const actionsArr = [
  {
@@ -50,32 +52,36 @@ function renderBtns(){
     newBtn.appendChild(btnContent);
     newBtn.classList.add("btn");
     newBtn.setAttribute("data-good", `${action.good}`);
+    if (newBtn.getAttribute("data-good") === "true") {
+      newBtn.style.backgroundColor = "green";
+    }
+    else {newBtn.style.backgroundColor = "red"}
   })
  
   document.querySelectorAll(".btn").forEach(item => 
     {item.addEventListener('click', event => {
       let target = event.target;
+      console.log(activity);
       if (target.getAttribute("data-good") === "true") {
         count += 5;
+        activity += 1;
         let stringCount = count.toString();
+        let activityString = activity.toString();
         pointsEl.innerHTML = `${stringCount} points today!`;
+        activityCount.innerHTML = `${activityString}`;
       }
       if (target.getAttribute("data-good") === "false") {
         count -= 5;
         let stringCount = count.toString();
         pointsEl.innerHTML = `${stringCount} points today!`;
       }
+      if (count >= 0) {
+        document.body.style.backgroundColor = "var(--turquoise-green)";
+      }
+      else {document.body.style.backgroundColor = "red"}
     })
   })
 }
 
 renderBtns()
-
-
-
-// stretch goal 1️⃣: Change each button color, green for good activities, red for bad.
-
-// stretch goal 2️⃣: Change the background color to reflect the user's total points. 0 or above = green, below 0 = red.
-
-// stretch goal 3️⃣: Add an activity count.
 
