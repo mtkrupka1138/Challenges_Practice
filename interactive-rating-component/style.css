@@ -1,0 +1,28 @@
+:root {
+
+  }
+
+  body {
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+  }
+
+  .main-container {
+      width: 450px;
+      height: 697px;
+      margin: 100px auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 20px;
+  }
+
+  .submit-container {
+    width: 450px;
+    height: 697px;
+    margin: 100px auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    display: none;
+  }
