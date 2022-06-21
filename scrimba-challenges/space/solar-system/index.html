@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function load() {
+                for (let i = 0; i<10; i++) {
+    let solarSystemDivs = document.getElementById("solarSystem");
+    let newDiv = document.createElement("div");
+    newDiv.setAttribute("id", `${i}`);
+    newDiv.style.height = `${i}0px`;
+    newDiv.style.width = `${i}0px`;
+    newDiv.style.borderRadius = `${i}0px`;
+    newDiv.style.borderColor = "white";
+    newDiv.style.borderWidth = "5px";
+    newDiv.style.borderStyle = "solid";
+    document.getElementById("solarSystem").appendChild(newDiv);
+}
+            }
+
+        </script>
+    </head>
+
+    <body onload="load()">
+        
+        <main id="solarSystem" class="main">
+                
+        </main>
+        
+        <script src="index.js"></script>
+
+    </body>
+
+</html>
