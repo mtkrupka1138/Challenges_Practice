@@ -1,5 +1,7 @@
 :root {
   background-color: #EFF5FF;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
 }
 
 .main-container {
@@ -10,9 +12,44 @@
 }
 
 .steps-overview {
-  background-image: ;
+  background-image: url("images/bg-sidebar-desktop.svg");
+  float: left;
+  width: 274px;
+  height: 568px;
 }
 
 .form-area {
-
+  float: right;
+  width: 640px;
 }
+
+.custom-counter {
+  list-style-type: none;
+}
+
+.custom-counter li {
+  counter-increment: step-counter;
+}
+
+.custom-counter li::before {
+  content: counter(step-counter);
+  border: 1px solid black;
+  border-radius: 100%;
+  display: flex;
+  padding: 5px;
+}
+
+li {
+  display: flex;
+}
+
+label, 
+button {
+  display: block;
+}
+
+input {
+  width: 60%;
+}
+
+
