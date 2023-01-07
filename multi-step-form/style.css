@@ -4,11 +4,58 @@
   font-weight: 400;
 }
 
+h1 {
+  font-size: 25px;
+  color: #022959;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: grey;
+}
+
+label {
+  font-size: 14px;
+  color: #022959;
+  line-height: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+input {
+  display: block;
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  height: 48px;
+  border: 1px #D6D9E6 solid;
+}
+
+a {
+  text-decoration: none;
+  margin-left: auto;
+  width: 30%;
+}
+
+.btn {
+  background-color: #022959;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  float: right;
+  margin-top: 50px;
+  text-align: center;
+  padding: 10px;
+}
+
 .main-container {
   width: 940px;
   height: 600px;
   background-color: white;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 .steps-overview {
@@ -16,11 +63,22 @@
   float: left;
   width: 274px;
   height: 568px;
+  margin: 16px 0 16px 16px;
 }
 
 .form-area {
   float: right;
-  width: 640px;
+  height: 372px;
+  width: 450px;
+  margin: 56px 100px 56px 100px;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step-active {
+  display: block;
 }
 
 .custom-counter {
@@ -43,13 +101,6 @@ li {
   display: flex;
 }
 
-label, 
-button {
-  display: block;
-}
 
-input {
-  width: 60%;
-}
 
 

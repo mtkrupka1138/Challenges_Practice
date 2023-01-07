@@ -15,6 +15,7 @@
 
     <body>
         <div class="main-container">
+
             <div class="steps-overview">
                 <ol class="custom-counter">
                     <li>
@@ -48,7 +49,7 @@
             <div class="form-area">
                 <form class="personal-form"></form>
 
-                    <div class="form-step">
+                    <div class="form-step form-step-active">
                         <h1>Personal info</h1>
                         <h2>Please provide your name, email address and phone number.</h2>
                         <label for="name">Name</label>
@@ -57,7 +58,24 @@
                         <input required/>
                         <label for="phone-number">Phone Number</label>
                         <input required/>
-                        <button type="submit">Next Step</button>
+                        <div class="">
+                            <a href="#" class="btn btn-next">Next Step</a>
+                        </div>
+                    </div>
+
+                    <div class="form-step">
+                        <h1>Select your plan</h1>
+                        <h2>You have the option of monthly or yearly billing.</h2>
+                        <label for="name">Name</label>
+                        <input required/>
+                        <label for="email-address">Email Address</label>
+                        <input required/>
+                        <label for="phone-number">Phone Number</label>
+                        <input required/>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev">Previous Step</a>
+                            <a href="#" class="btn btn-next">Next Step</a>
+                        </div>
                     </div>
 
                     <div class="form-step">
@@ -69,7 +87,10 @@
                         <input required/>
                         <label for="phone-number">Phone Number</label>
                         <input required/>
-                        <button type="submit">Next Step</button>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev">Previous Step</a>
+                            <a href="#" class="btn btn-next">Next Step</a>
+                        </div>
                     </div>
 
                     <div class="form-step">
@@ -81,19 +102,10 @@
                         <input required/>
                         <label for="phone-number">Phone Number</label>
                         <input required/>
-                        <button type="submit">Next Step</button>
-                    </div>
-
-                    <div class="form-step">
-                        <h1>Personal info</h1>
-                        <h2>Please provide your name, email address and phone number.</h2>
-                        <label for="name">Name</label>
-                        <input required/>
-                        <label for="email-address">Email Address</label>
-                        <input required/>
-                        <label for="phone-number">Phone Number</label>
-                        <input required/>
-                        <button type="submit">Next Step</button>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev">Previous Step</a>
+                            <input type="submit" value="Submit" class="btn">
+                        </div>
                     </div>
 
                 </form>
