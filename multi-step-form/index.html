@@ -67,44 +67,94 @@
                         <h1>Select your plan</h1>
                         <h2>You have the option of monthly or yearly billing.</h2>
                         <label for="name">Name</label>
-                        <input required/>
-                        <label for="email-address">Email Address</label>
-                        <input required/>
-                        <label for="phone-number">Phone Number</label>
-                        <input required/>
+                        <div class="plan-option-container">
+                            <div class="plan-option">
+                                <img>
+                                <p class="plan-level-text">Arcade</p>
+                                <p class="plan-level-cost">$9/mo</p>
+                            </div>
+                            <div class="plan-option">
+                                <img>
+                                <p class="plan-level-text">Advanced</p>
+                                <p class="plan-level-cost">$12/mo</p>
+                            </div>
+                            <div class="plan-option">
+                                <img>
+                                <p class="plan-level-text">Pro</p>
+                                <p class="plan-level-cost">$15/mo</p>
+                            </div>
+                        </div>
+                        <div class="plan-time-toggle">
+                            <p>Monthly</p>
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                            <p>Yearly</p>
+                        </div>
                         <div class="btns-group">
-                            <a href="#" class="btn btn-prev">Previous Step</a>
+                            <a href="#" class="btn btn-prev">Go Back</a>
                             <a href="#" class="btn btn-next">Next Step</a>
                         </div>
                     </div>
 
                     <div class="form-step">
-                        <h1>Personal info</h1>
-                        <h2>Please provide your name, email address and phone number.</h2>
-                        <label for="name">Name</label>
-                        <input required/>
-                        <label for="email-address">Email Address</label>
-                        <input required/>
-                        <label for="phone-number">Phone Number</label>
-                        <input required/>
+                        <h1>Pick add-ons</h1>
+                        <h2>Add-ons help enhance your gaming experience.</h2>
+                        <div class="add-on-container">
+                            <div class="add-on">
+                                <input type="checkbox">
+                                <label>
+                                    <div>
+                                        <h3>Online service</h3>
+                                        <p>Access to multiplayer games</p>
+                                    </div>
+                                </label>
+                                <div>+$1/mo</div>
+                            </div>
+                            <div class="add-on">
+                                <input type="checkbox">
+                                <label>
+                                    <div>
+                                        <h3>Larger storage</h3>
+                                        <p>Extra 1TB of cloud save</p>
+                                    </div>
+                                </label>
+                                <div>+$2/mo</div>
+                            </div>
+                            <div class="add-on">
+                                <input type="checkbox">
+                                <label>
+                                    <div>
+                                        <h3>Customizable profile</h3>
+                                        <p>Custom theme on your profile</p>
+                                    </div>
+                                </label>
+                                <div>+$2/mo</div>
+                            </div>
+                        </div>
                         <div class="btns-group">
-                            <a href="#" class="btn btn-prev">Previous Step</a>
+                            <a href="#" class="btn btn-prev">Go Back</a>
                             <a href="#" class="btn btn-next">Next Step</a>
                         </div>
                     </div>
 
                     <div class="form-step">
-                        <h1>Personal info</h1>
-                        <h2>Please provide your name, email address and phone number.</h2>
-                        <label for="name">Name</label>
-                        <input required/>
-                        <label for="email-address">Email Address</label>
-                        <input required/>
-                        <label for="phone-number">Phone Number</label>
-                        <input required/>
+                        <h1>Finishing up</h1>
+                        <h2>Double-check everything looks OK before confirming.</h2>
+                        <div class="summary">
+                            <div class="summary-plan-choice">
+
+                            </div>
+                            <div class="summary-add-ons">
+
+                            </div>
+                        </div>
+                        <div class="total-cost">
+                            <p></p>
+                            <p></p>
+                        </div>
                         <div class="btns-group">
-                            <a href="#" class="btn btn-prev">Previous Step</a>
-                            <input type="submit" value="Submit" class="btn">
+                            <a href="#" class="btn btn-prev">Go Back</a>
+                            <input type="submit" value="Confirm" class="btn">
                         </div>
                     </div>
 

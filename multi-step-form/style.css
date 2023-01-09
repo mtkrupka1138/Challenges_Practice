@@ -74,7 +74,7 @@ a {
 }
 
 .form-step {
-  display: none;
+  /* display: none; */
 }
 
 .form-step-active {
