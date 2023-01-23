@@ -44,10 +44,15 @@ a {
   color: white;
   border-style: none;
   border-radius: 10px;
-  float: right;
   margin-top: 50px;
   text-align: center;
   padding: 10px;
+}
+
+.btns-group {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .main-container {
@@ -74,7 +79,7 @@ a {
 }
 
 .form-step {
-  /* display: none; */
+  display: block;
 }
 
 .form-step-active {
@@ -98,6 +103,30 @@ a {
 }
 
 li {
+  display: flex;
+}
+
+/* Plan options - Form 2 */
+
+.plan-option-container {
+  width: 450px;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-option {
+  width: 138px;
+  height: 160px;
+  border: #D6D9E6 solid 1px;
+  border-radius: 10px;
+}
+
+.plan-option:hover {
+  border: #483EFF solid 1px;
+}
+
+.plan-time-toggle {
   display: flex;
 }
 
