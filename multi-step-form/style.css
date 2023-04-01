@@ -9,10 +9,19 @@ h1 {
   color: #022959;
 }
 
-h2 {
-  font-size: 16px;
+.steps-overview h2 {
+  font-size: 14px;
   font-weight: 400;
-  color: grey;
+  color: #ABBCFF;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.steps-overview h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
 }
 
 label {
@@ -100,10 +109,20 @@ a {
   border-radius: 100%;
   display: flex;
   padding: 5px;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+  margin: 10px 10px;
+  align-items: center;
 }
 
 li {
   display: flex;
+  margin: 0;
+}
+
+li div {
+  margin: auto 0
 }
 
 /* Plan options - Form 2 */
